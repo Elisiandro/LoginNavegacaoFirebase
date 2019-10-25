@@ -7,16 +7,12 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-
-
 export default class Main extends Component {
 
 	render() {
 		return(
-			<View style={styles.container}>
-				
-                <Text>teste</Text>
-				
+			<View style={styles.container}>				
+          <Text>teste</Text>				
 			</View>	
 			)
 	}
