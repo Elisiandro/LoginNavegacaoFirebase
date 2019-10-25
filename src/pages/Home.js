@@ -17,13 +17,10 @@ export default class Home extends React.Component {
     state = {
         modalVisible: false,
         data: [],
-
         _path: '',
         _extension: '',
         _name: '',
         _description: ''
-
-
     }
 
     setModalVisible(visible) {
@@ -48,21 +45,13 @@ export default class Home extends React.Component {
         const responseJson = await response.json()
         this.setState({ data: responseJson.data.results })
     }
-
-
-
-
     _renderItem = ({ item }) => {
-
-
-
         return (
             <View style={{ marginTop: 22 }}>
                 <TouchableOpacity onPress={() => this._onItemPress(item)} style={{ flexDirection: 'row', padding: 10, alignItems: 'center' }}>
                     <Image style={{ height: 50, width: 50, borderRadius: 25 }} source={{ uri: `${item.thumbnail.path}.${item.thumbnail.extension}` }} />
                     <Text style={{ marginLeft: 10 }}>{item.name}</Text>
                 </TouchableOpacity>
-
 
                 <Modal
                     animationType="slide"
@@ -87,10 +76,8 @@ export default class Home extends React.Component {
     }
 
     _onItemPress = (item) => {
-        //this.props.navigation.navigate('Description', {hero: item})
         this.setModalVisible(true);
         this.setItemModal(item)
-
     }
 
     render() {
