@@ -8,9 +8,7 @@ Este projeto contem uma autenticao utilizando a bade de dados do firebase com (e
 É possivel criar usuarios se necessario.
 Apos o login, é possivel acessar informacões da API da marvel, demonstrando o acesso a essa API utilizando react-native.
 
-Professor:
-
-Luis Hies
+Professor: Luis Henrique Ries
 Faculdade Senac Porto Alegre.
 
 
