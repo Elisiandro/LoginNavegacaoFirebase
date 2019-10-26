@@ -15,8 +15,6 @@ const firebaseConfig = {
   measurementId: "G-LX4K4LS97Z"
 };
 
-firebase.initializeApp(firebaseConfig);
-
 export default class Logo extends Component {
 
   constructor(props) {
@@ -26,6 +24,10 @@ export default class Logo extends Component {
       _email: '',
       _senha: ''
     }
+
+    if (!firebase.apps.length) { firebase.initializeApp(firebaseConfig) }
+
+
   }
 
   onPress = () => {
